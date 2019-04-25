@@ -1,0 +1,25 @@
+{
+   "type": "mysql",
+   "host": "192.168.64.2",
+   "port": 3306,
+   "username": "senya",
+   "password": "senya2103",
+   "database": "jiskefet",
+   "synchronize": true,
+   "logging": true,
+   "keepConnectionAlive": true,
+   "entities": [
+      "src/entity/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
