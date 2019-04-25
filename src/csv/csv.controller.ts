@@ -52,6 +52,5 @@ export class CsvController {
                     .pipe(ws);
             },
         );
-        return (this.appService.getFile(bucketName, fileName)).pipe(response);;
     }
 }
