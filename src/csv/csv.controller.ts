@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Res } from '@nestjs/common';
 import 'reflect-metadata';
 import { getManager } from 'typeorm';
 import { Log } from '../entity/log.entity';
@@ -6,6 +6,7 @@ import { Run } from '../entity/run.entity';
 import { User } from '../entity/user.entity';
 import { SubSystem } from '../entity/sub_system.entity';
 import { log } from 'util';
+import { Response } from 'express';
 
 @Controller('csv')
 export class CsvController {
@@ -14,7 +15,7 @@ export class CsvController {
         return 'Pass colDelimiter, decDelimiter, dateFrom and dateTo to get a csv file';
     }
     @Get('colDelimiter=:colDelimiter&tableName=:tableName&columns=:columns')
-    make_csv(@Param() params): string {
+    make_csv(@Param() params, @Res() res: Response): string {
         let repository;
         let table = params.tableName;
         if (table === 'log' || table === 'Log') {
@@ -52,5 +53,7 @@ export class CsvController {
                     .pipe(ws);
             },
         );
+        res.download('out.csv');
+        return 'CSV is ready to upload!';
     }
 }
