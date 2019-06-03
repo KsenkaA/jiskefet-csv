@@ -32,4 +32,3 @@ http://jiskefetcsv.std-837.ist.mospolytech.ru/
 ### Егерев И.А.
 
 Развернул работу с JiskefetAPI. Работа в объеме 110ч.
-»»»
