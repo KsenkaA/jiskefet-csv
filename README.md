@@ -13,7 +13,7 @@ http://jiskefetcsv.std-837.ist.mospolytech.ru/csv/
 |                | @KsenkaA (gitHub)|                          |
 | 181-331        | @Mistone (gitlab)| Кутузов В.А.             |
 | 181-331        | @SemVolk (gitHub)| Волкодав С.А.            |
-| 181-331        | @username3       | Егерев И.А.              |
+| 181-331        | @Cnfhn (lab)     | Егерев И.А.              |
 
 ## Личный вклад участников
 
